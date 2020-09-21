@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Tenho uma boneca...</title>
+  <meta name="description" content="A creepy boneca de Antuérpia">
+
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <audio id="boneca-creepy-music" loop autoplay>
+      <source src="./resources/boneca.mp3" type="audio/mpeg" />
+  </audio>
+  <audio id="hungry-sound" autoplay>
+    <source src="./resources/fome.mp3" type="audio/mpeg" />
+  </audio>
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <script>
+      document.addEventListener("click", function() {
+        var bonecaAudio = document.getElementById("boneca-creepy-music")
+        bonecaAudio.volume = 0.1
+        bonecaAudio.play()
+      })
+
+      function makeHungrySound() {
+        var hungryAudio = document.getElementById("hungry-sound")
+        hungryAudio.play()
+      }
+  </script>
+</head>
+
+<body>
+  <div id="doll">
+    <div id="tummy" class="interactive" onclick="makeHungrySound()"></div>
+    <div id="arm" class="interactive"></div>
+  </div>
+  <div id="title">Parab&eacute;ns Tom!</div>
+</body>
+</html>
