@@ -14,6 +14,9 @@
   <audio id="hungry-sound" autoplay>
     <source src="./resources/fome.mp3" type="audio/mpeg" />
   </audio>
+  <audio id="birthday-sound" autoplay>
+    <source src="./resources/parabens.mp3" type="audio/mpeg" />
+  </audio>
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
   <script>
@@ -27,13 +30,18 @@
         var hungryAudio = document.getElementById("hungry-sound")
         hungryAudio.play()
       }
+
+      function wishHappyBirthday() {
+        var birthdayAudio = document.getElementById("birthday-sound")
+        birthdayAudio.play()
+      }
   </script>
 </head>
 
 <body>
   <div id="doll">
     <div id="tummy" class="interactive" onclick="makeHungrySound()"></div>
-    <div id="arm" class="interactive"></div>
+    <div id="arm" class="interactive" onclick="wishHappyBirthday()"></div>
   </div>
   <div id="title">Parab&eacute;ns Tom!</div>
 </body>
